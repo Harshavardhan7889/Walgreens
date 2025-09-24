@@ -11,7 +11,7 @@ using Walgreens.Models;
 namespace Walgreens.Migrations
 {
     [DbContext(typeof(PrescriptionContext))]
-    [Migration("20250924165558_Walgreens0925")]
+    [Migration("20250924185112_Walgreens0925")]
     partial class Walgreens0925
     {
         /// <inheritdoc />
@@ -26,13 +26,15 @@ namespace Walgreens.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<double?>("Cost")
+                    b.Property<double>("Cost")
                         .HasColumnType("REAL");
 
                     b.Property<string>("FillStatus")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("MedicationName")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("RequestTime")

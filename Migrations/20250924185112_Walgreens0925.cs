@@ -19,9 +19,9 @@ namespace Walgreens.Migrations
                 {
                     PrescriptionId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    MedicationName = table.Column<string>(type: "TEXT", nullable: true),
-                    FillStatus = table.Column<string>(type: "TEXT", nullable: true),
-                    Cost = table.Column<double>(type: "REAL", nullable: true),
+                    MedicationName = table.Column<string>(type: "TEXT", nullable: false),
+                    FillStatus = table.Column<string>(type: "TEXT", nullable: false),
+                    Cost = table.Column<double>(type: "REAL", nullable: false),
                     RequestTime = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>

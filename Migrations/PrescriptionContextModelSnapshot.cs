@@ -23,13 +23,15 @@ namespace Walgreens.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<double?>("Cost")
+                    b.Property<double>("Cost")
                         .HasColumnType("REAL");
 
                     b.Property<string>("FillStatus")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("MedicationName")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("RequestTime")
